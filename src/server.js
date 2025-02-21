@@ -29,6 +29,11 @@ io.on("connection", (socket) => {
 });
 
 const PORT = 7623;
+
+app.use((req, res)=> {
+  res.send("Your Api is working!...")
+})
+
 server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
